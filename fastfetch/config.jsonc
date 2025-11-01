@@ -1,0 +1,25 @@
+// ~/.config/fastfetch/config.jsonc
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "source": "none",  // use small ASCII logo
+        "width": 12,
+        "padding": {
+            "top": 0,
+            "left": 2,
+            "right": 4
+        }
+    },
+
+    "modules": [
+        "title",
+        "separator",
+        { "type": "os",       "key": "OS" },      
+        { "type": "kernel",   "key": "Kernel" },
+        { "type": "uptime",   "key": "Uptime"},
+        { "type": "packages", "key": "Packages"},      
+        { "type": "memory",   "key": "Memory"},
+        { "type": "disk",     "key": "Disk"},
+        { "type": "battery",  "key": "Battery"}
+    ]
+}

@@ -1,0 +1,25 @@
+font=JetBrainsMono Nerd Font 8
+background-color=#000000FF
+text-color=#FFFFFFFF
+border-size=0
+border-radius=0
+padding=12
+margin=15,10,10
+anchor=top-center
+width=300
+max-history=5
+default-timeout=5000
+group-by=app-name
+actions=1
+
+[grouped]
+format=<b>%s</b>\n%b
+
+[app-name=vol-change]
+anchor=top-right
+background-color=#2d2d2dFF
+text-color=#ffffffFF
+width=125
+height=35
+margin=12,18,5
+padding=10

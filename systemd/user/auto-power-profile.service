@@ -1,0 +1,13 @@
+[Unit]
+Description=Automatic Power Profile Watcher
+
+[Service]
+Type=simple
+ExecStart=%h/.config/hypr/scripts/power-profile.sh
+Restart=on-failure
+RestartSec=10
+Environment=THRESHOLD=30
+Environment=WATCH_INTERVAL=0.5
+
+[Install]
+WantedBy=default.target

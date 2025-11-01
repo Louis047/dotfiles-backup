@@ -1,0 +1,4 @@
+[[shades]]
+name = "custom"
+path = "$HOME/.config/hypr/shaders/custom.glsl"
+default = true

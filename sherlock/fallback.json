@@ -1,0 +1,29 @@
+[
+    {
+        "name": "Calculator",
+        "type": "calculation",
+        "args": {
+            "capabilities": [
+                "calc.math",
+                "calc.units"
+            ]
+        },
+        "priority": 1,
+        "on_return": "copy"
+    },
+    {
+        "name": "App Launcher",
+        "alias": "app",
+        "type": "app_launcher",
+        "args": {},
+        "priority": 3,
+        "home": "Home"
+    },
+    {
+        "name": "Kill Process",
+        "alias": "kill",
+        "type": "process",
+        "args": {},
+        "priority": 0
+    }
+]

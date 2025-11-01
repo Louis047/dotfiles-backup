@@ -1,0 +1,13 @@
+{
+  "Ungoogled Chromium": {
+    "name": "Ungoogled Chromium",
+    "exec": "chromium --ozone-platform=wayland --ozone-platform-hint=auto --enable-features=WaylandWindowDecorations,TouchpadOverscrollHistoryNavigation %U"
+  },
+  
+  "Equibop": {
+    "name": "Equibop",
+    "icon": "equibop",
+    "exec": "/usr/bin/equibop --enable-features=UseOzonePlatform --ozone-platform=wayland %U",
+    "keywords": "equibop"
+  }
+}

@@ -1,0 +1,13 @@
+[Unit]
+Description=Elephant background service
+After=default.target
+Wants=default.target
+
+[Service]
+Type=simple
+ExecStart=elephant
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=default.target

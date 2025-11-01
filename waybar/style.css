@@ -1,0 +1,295 @@
+/* Global Styles */
+/*::root{
+ Left for integrating pywal/hellwal support system level after dealing with app launcher fixes
+}
+*/
+
+* {
+    font-family: "JetBrainsMono Nerd Font Propo", "SF Pro Text";
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 0;
+    background: black;
+    min-height: 0;
+}
+
+/* Main Window */
+window#waybar {
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+window#waybar.hidden {
+    opacity: 0.3;
+}
+
+/* Button Styles */
+button {
+    color: inherit;
+    border-radius: 0;
+    transition: all 0.2s ease;
+    margin: 0 1px;
+    padding: 0 2px;
+    min-height: 0;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Power Menu */
+#custom-power-menu {
+    background-image: url("assets/power-menu-white.svg");
+    background-repeat: no-repeat;
+    background-size: 14px;
+    background-position: center;
+    min-width: 20px;
+    padding: 0 3px;
+    border-radius: 0;
+    transition: all 0.1s linear;
+    min-height: 0;
+}
+
+#custom-power-menu:hover {
+    background-image: url("assets/power-menu-color.svg");
+}
+
+/* Workspaces */
+#workspaces {
+    border: 0px solid transparent;
+    border-radius: 0;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+#workspaces button {
+    background: transparent;
+    color: #888888;
+    padding: 0 4px;
+    margin: 0 0px;
+    transition: all 0.1s linear;
+    min-height: 0;
+    min-width: 0;
+}
+
+#workspaces button:hover {
+    color: transparent;
+    border-top: 0px solid transparent;
+}
+
+#workspaces button.active {
+    background: transparent;
+    color: #fcfcfc;
+    font-weight: 600;
+}
+
+#workspaces button.urgent {
+    background: rgba(255, 107, 107, 0.4);
+    color: #ff6b6b;
+    margin: 0;
+}
+
+/* Window Title */
+#window {
+    color: #ffffff;
+    padding: 0 8px;
+    min-height: 0;
+}
+
+/* Individual Audio/Network/Battery/Bluetooth Modules */
+#pulseaudio,
+#bluetooth,
+#network,
+#battery {
+    color: #bbbbbb;
+    padding: 0 4px;
+    font-weight: 400;
+    transition: all 0.1s ease-in-out;
+    min-height: 0;
+}
+
+#pulseaudio:hover,
+#bluetooth:hover,
+#network:hover,
+#battery:hover {
+    color: #ffffff;
+}
+
+/* Microphone state (pulseaudio) — follow existing Waybar theme colors */
+#pulseaudio.source {
+    color: #bbbbbb;
+}
+
+#pulseaudio.source:hover {
+    color: #ffffff;
+}
+
+#pulseaudio.source-muted {
+    color: #666666;
+}
+
+/* State-specific styling */
+#pulseaudio.muted {
+    color: #666666;
+}
+
+/* Bluetooth state styling */
+#bluetooth.disabled,
+#bluetooth.off {
+    color: #666666;
+}
+
+#bluetooth.on {
+    color: #bbbbbb;
+}
+
+#bluetooth.connected {
+    color: #bbbbbb;
+}
+
+#bluetooth.off:hover,
+#bluetooth.on:hover,
+#bluetooth.connected:hover {
+    color: #ffffff;
+}
+
+#network.disconnected {
+    color: #666666;
+}
+
+#battery.warning {
+    color: #ffcc00;
+}
+
+#battery.critical {
+    color: #ff6b6b;
+}
+
+/* Power-System Group - Unified background */
+#power-system-group {
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+}
+
+/* Power Profile Module within group */
+#custom-power-profile {
+    color: #bbbbbb;
+    padding: 0 4px;
+    margin: 0;
+    font-weight: 400;
+    border-radius: 0;
+    transition: all 0.2s ease;
+    min-height: 0;
+}
+
+#custom-power-profile:hover {
+    color: #ffffff;
+}
+
+/* System Info Group within power-system-group */
+#group-system-info {
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* System Info Icon */
+#custom-system-icon {
+    color: #bbbbbb;
+    padding: 0 3px;
+    font-weight: 400;
+    border-radius: 0;
+    transition: all 0.2s ease;
+    min-height: 0;
+}
+
+#custom-system-icon:hover {
+    color: #ffffff;
+}
+
+/* System Info Drawer Children */
+#disk,
+#cpu,
+#memory,
+#disk.drawer-child,
+#cpu.drawer-child,
+#memory.drawer-child {
+    color: #bbbbbb;
+    padding: 0 4px;
+    margin: 0;
+    font-weight: 400;
+    border-radius: 0;
+    transition: all 0.2s ease;
+    min-height: 0;
+}
+
+#disk:hover,
+#cpu:hover,
+#memory:hover,
+#disk.drawer-child:hover,
+#cpu.drawer-child:hover,
+#memory.drawer-child:hover {
+    color: #ffffff;
+}
+
+/* System Tray */
+#tray {
+    padding: 0 1px;
+    margin: 0 2px;
+    border-radius: 0;
+    min-height: 0;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0;
+}
+
+/* Clock */
+#clock {
+    color: #ffffff;
+    padding: 0 6px;
+    border-radius: 0;
+    transition: all 0.2s ease;
+    min-height: 0;
+}
+
+/* Tooltip Styling - Floating and Compact */
+tooltip {
+    background: rgba(13, 13, 13, 0.95);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0;
+    padding: 0;
+}
+
+tooltip label {
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+    font-size: 11px;
+    font-weight: 700;
+    background: rgba(13, 13, 13, 0.95);
+}
+
+/* Focus States */
+button:focus {
+    outline: none;
+    box-shadow: inset 0 -2px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* Module spacing */
+.modules-left,
+.modules-center,
+.modules-right {
+    margin: 0;
+    padding: 0;
+}

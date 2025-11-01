@@ -1,0 +1,13 @@
+[Unit]
+Description=Walker background GApplication service
+After=default.target
+Wants=default.target
+
+[Service]
+Type=simple
+ExecStart=walker --gapplication-service
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=default.target

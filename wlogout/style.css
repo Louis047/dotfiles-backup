@@ -1,0 +1,53 @@
+window {
+    background-color: rgba(0, 0, 0, 0.45); /* Semi-transparent black for blur */
+}
+
+*{
+	font-family: "SF Pro Text";
+}
+
+button {
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0;
+    background-size: 50%;
+    border: none; 
+    outline: none; 
+    outline-width: 0; 
+    outline-style: none; 
+    box-shadow: none;
+    margin: 75px 0 75px 0;
+    transition: all 0.15s ease-in-out;
+    background-color: rgba(40, 40, 40, 0.6);
+    color: transparent;
+}
+
+button:hover {
+    background-color: rgba(40, 40, 40, 0.8);
+    background-size: 75%;
+    color: #fafafa;
+}
+
+/* Icons */
+#lock {
+    background-image: url("icons/lock.png");
+    border-radius: 12px 0 0 12px;
+}
+
+#logout {
+    background-image: url("icons/logout.png");
+}
+
+#shutdown {
+    background-image: url("icons/shutdown.png");
+}
+
+#reboot {
+    background-image: url("icons/restart.png");
+}
+
+#cancel {
+    background-image: url("icons/cancel.png");
+    border-radius: 0 12px 12px 0;
+}
+
