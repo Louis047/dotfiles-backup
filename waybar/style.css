@@ -72,11 +72,11 @@ button:hover {
     transition: all 0.1s linear;
     min-height: 0;
     min-width: 0;
+    border: 1px solid  transparent;
 }
 
 #workspaces button:hover {
-    color: transparent;
-    border-top: 0px solid transparent;
+    color: #fefefe;
 }
 
 #workspaces button.active {
