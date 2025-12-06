@@ -82,8 +82,8 @@
         "format-bluetooth": "{icon} {volume}% {format_source}",
         "format-bluetooth-muted": "󰸈 {format_source}",
         "format-muted": "󰸈{format_source}",
-        "format-source": " ", // mic ON icon (Nerd Font)
-        "format-source-muted": " ", // mic OFF icon (Nerd Font)
+        "format-source": "", // mic ON icon (Nerd Font)
+        "format-source-muted": "", // mic OFF icon (Nerd Font)
         "format-icons": {
             "headphone": "󰋋",
             "hands-free": "󰋎",
