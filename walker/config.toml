@@ -1,0 +1,13 @@
+theme="Dynamic-Dark"
+force_keyboard_focus=true
+
+# Hide Keybinds Globally
+hide_quick_activation=true
+hide_action_hints=true
+
+[providers]
+default=[
+	"desktopapplications",
+	"calc",
+	"websearch"
+	]
