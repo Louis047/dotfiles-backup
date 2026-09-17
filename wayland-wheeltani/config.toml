@@ -1,0 +1,21 @@
+# Configuration for exponential autoscrolling
+# Bypasses the default discrete speed steps so the curve calculation is used
+scroll_speed_steps = []
+
+# Exponent controlling the acceleration curve (default is 1.6).
+# Set to 3.0 or 4.0 for a steeper, exponential increase in speed.
+acceleration_exponent = 3.0
+
+# Scrolling speed limits (detents per second)
+min_speed_detents_per_second = 1.5
+max_speed_detents_per_second = 50.0
+
+# Distance properties
+deadzone_units = 10       # Movement threshold (in pixels) before scroll starts
+full_speed_units = 120    # Distance at which maximum scroll speed is achieved
+max_offset_units = 240    # Cap for absolute maximum tracked movement
+
+[device_match]
+vendor_id = "04d9"
+product_id = "fc7a"
+name = "USB Gaming Mouse"

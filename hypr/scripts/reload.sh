@@ -1,16 +1,17 @@
 #!/usr/bin/env bash
-set -e
 
+# 1. Reload Hyprland
 hyprctl reload
 
-pkill -x waybar || true
-waybar &
-
-swaync-client -R -rs || true
-pkill -9 swayosd-server || true
-swayosd-server &
-
-# Reload and restart systemd user services
-systemctl --user daemon-reload
-systemctl --user restart elephant.service
-systemctl --user restart walker.service
+# 2. Check noctalia status
+if pgrep -x noctalia >/dev/null; then
+    # Active: kill it and wait for exit, then start it
+    pkill -x noctalia
+    while pgrep -x noctalia >/dev/null; do
+        sleep 0.1
+    done
+    nohup noctalia >/dev/null 2>&1 &
+else
+    # Inactive: run noctalia normally
+    nohup noctalia >/dev/null 2>&1 &
+fi
